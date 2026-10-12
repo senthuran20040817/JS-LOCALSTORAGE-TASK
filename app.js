@@ -48,6 +48,7 @@ function btnUpdateCustomrOnAction() {
 
 function btnClearStorageOnAction() {
     alert("clear storage");
+    localStorage.clear();
 }
 
 function btnLoadTableOnAction() {
