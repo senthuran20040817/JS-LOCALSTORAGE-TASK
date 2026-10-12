@@ -26,6 +26,12 @@ function btnSearchCustomrOnAction() {
 
 function btnDeleteCustomrOnAction() {
     alert("delete customer");
+    for(let i=0 ; i<customer.length ; i++){
+        if(customer[i].id===document.getElementById("txtid").value){
+            customer.pop(customer[i]);
+        }
+    }
+    localStorage.setItem("customer",JSON.stringify(customer));
 }
 
 function btnUpdateCustomrOnAction() {
