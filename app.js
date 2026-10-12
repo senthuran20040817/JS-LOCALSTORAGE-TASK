@@ -36,6 +36,14 @@ function btnDeleteCustomrOnAction() {
 
 function btnUpdateCustomrOnAction() {
     alert("update customer");
+    for(let i=0 ; i<customer.length ; i++){
+        if(customer[i].id===document.getElementById("txtid").value){
+            customer[i].name = document.getElementById("txtname").value;
+            customer[i].age = document.getElementById("txtage").value;
+            customer[i].address = document.getElementById("txtaddress").value;
+        }
+    }
+    localStorage.setItem("customer",JSON.stringify(customer));
 }
 
 function btnClearStorageOnAction() {
