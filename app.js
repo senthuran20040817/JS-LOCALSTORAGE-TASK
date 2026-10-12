@@ -53,4 +53,25 @@ function btnClearStorageOnAction() {
 
 function btnLoadTableOnAction() {
     alert("load table");
+    document.getElementById("tblCustomer").innerText ="";
+    document.getElementById("tblCustomer").innerHTML +=
+    `
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+        <th>city</th>    
+    </tr>
+    ` 
+    for(let i=0 ; i<customer.length ; i++){
+        document.getElementById("tblCustomer").innerHTML +=
+        `
+        <tr>
+            <td>${customer[i].id}</td>
+            <td>${customer[i].name}</td>
+            <td>${customer[i].age}</td>
+            <td>${customer[i].address}</td>
+        </tr>
+        ` 
+    }
 }
