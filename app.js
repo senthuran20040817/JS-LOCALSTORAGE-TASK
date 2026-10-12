@@ -15,6 +15,13 @@ function btnaddCustomrOnAction() {
 
 function btnSearchCustomrOnAction() {
     alert("search customer");
+    for(let i=0 ; i<customer.length ; i++){
+        if(customer[i].id===document.getElementById("txtid").value){
+            document.getElementById("txtname").value = customer[i].name;
+            document.getElementById("txtage").value = customer[i].age;
+            document.getElementById("txtaddress").value = customer[i].address;
+        }
+    }
 }
 
 function btnDeleteCustomrOnAction() {
